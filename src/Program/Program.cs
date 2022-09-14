@@ -19,8 +19,8 @@ namespace Recipies
         public static void Main(string[] args)
         {
             PopulateCatalogs();
+            IJsonConvertible recipe = new Recipe();
 
-            Recipe recipe = new Recipe();
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
